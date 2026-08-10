@@ -828,7 +828,7 @@ export function configureIstio(
     ingressNs.ns
   );
   const sequencerFlowControl = configureSequencerFlowControl(ingressNs.ns);
-  installAppWhitelisting();
+  installAppWhitelisting(ingressNs.ns);
   return {
     allResources: [
       ...gateways,
